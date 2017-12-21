@@ -56,7 +56,7 @@ public class PacientResultsWindow {
 		
 		/* Visualizador de ventana */
 		window.setTitle("Pacientes");
-		window.setBounds(0, 0, 350, 350);
+		window.setBounds(0, 0, 370, 350);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 	}
