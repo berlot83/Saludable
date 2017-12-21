@@ -13,7 +13,24 @@ public class BackupOnFile implements Serializable{
 	static public void saveLog(String report, String name) {
 		try {
 			/* Local del proyecto */
-			File fileLocal = new File("BackupFolder/"+name+".txt");
+			File fileLocal = new File("BackupFolderPacients/"+name+".txt");
+			if(fileLocal.exists()) {
+				AlertWindow aw = new AlertWindow("El archivo para esta consulta ya existe y no puede sobreescribirse, verifique si igualmente los datos se cargaron en la DB");
+			}else{
+				FileWriter fileWriterLocal = new FileWriter(fileLocal, true);
+				fileWriterLocal.write(report);
+				fileWriterLocal.flush();
+				fileWriterLocal.close(); 				
+			}
+		} catch (Exception error) {
+			System.out.println("explotó : "+ error.getMessage());
+		}
+	}
+	
+	static public void saveLogFood(String report, String name) {
+		try {
+			/* Local del proyecto */
+			File fileLocal = new File("BackupFolderMeals/"+name+".txt");
 			if(fileLocal.exists()) {
 				AlertWindow aw = new AlertWindow("El archivo para esta consulta ya existe y no puede sobreescribirse, verifique si igualmente los datos se cargaron en la DB");
 			}else{

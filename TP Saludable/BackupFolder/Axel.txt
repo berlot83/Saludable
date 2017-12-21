@@ -1,1 +1,0 @@
-Pacient id= 0, Nombre= Axel, Apellido=Berlot, Dni= 30158619

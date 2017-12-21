@@ -95,20 +95,4 @@ public class PacientFactory implements IMethodsDataBase<Pacient> {
 		}
 	}
 	
-	
-	public static void main(String[] args) {
-		//Pacient p1 = new Pacient(1,"Axel", "Berlot", LocalDate.of(1983,04,9), 30158619, "1553189339", "berlot83@yahoo.com.ar", "Buenos Aires", "Masculino");
-		PacientFactory pf = new PacientFactory();
-		//pf.insertPacient(p1);
-		
-		
-		for(Pacient item : pf.getPacients()) {
-			System.out.println(item.toString());
-		}
-		
-		//System.out.println(pf.getPacient(13));
-	}
-
-	
-	
 }

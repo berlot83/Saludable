@@ -131,5 +131,6 @@ public class FormWindow {
 		window.setBounds(0, 0, 300, 600);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
+		window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);
 	}
 }

@@ -1,0 +1,1 @@
+Pacient id= 0, Nombre= Dante, Apellido=Panella, Dni= 30524563

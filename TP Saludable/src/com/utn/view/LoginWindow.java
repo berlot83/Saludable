@@ -96,6 +96,7 @@ public class LoginWindow {
 		window.setBounds(0, 0, 230, 300);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
+		window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);
 	}
 
 }
