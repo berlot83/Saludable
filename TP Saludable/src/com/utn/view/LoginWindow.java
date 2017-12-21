@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.utn.controllers.AlertWindow;
 import com.utn.factory.UserFactory;
 
 public class LoginWindow {

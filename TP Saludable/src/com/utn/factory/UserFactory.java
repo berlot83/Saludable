@@ -3,9 +3,10 @@ package com.utn.factory;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import com.utn.controllers.AlertWindow;
 import com.utn.dao.IConnection;
 import com.utn.model.User;
-import com.utn.view.AlertWindow;
 
 public class UserFactory {
 

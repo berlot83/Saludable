@@ -8,10 +8,11 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.utn.controllers.AlertWindow;
 import com.utn.dao.IConnection;
 import com.utn.dao.IMethodsDataBase;
 import com.utn.model.Pacient;
-import com.utn.view.AlertWindow;
 
 public class PacientFactory implements IMethodsDataBase<Pacient> {
 
@@ -89,6 +90,7 @@ public class PacientFactory implements IMethodsDataBase<Pacient> {
 		}
 	}
 	
+	
 	public static void main(String[] args) {
 		//Pacient p1 = new Pacient(1,"Axel", "Berlot", LocalDate.of(1983,04,9), 30158619, "1553189339", "berlot83@yahoo.com.ar", "Buenos Aires", "Masculino");
 		PacientFactory pf = new PacientFactory();
@@ -96,10 +98,12 @@ public class PacientFactory implements IMethodsDataBase<Pacient> {
 		
 		
 		for(Pacient item : pf.getPacients()) {
-	//		System.out.println(item.toString());
+			System.out.println(item.toString());
 		}
 		
-		System.out.println(pf.getPacient(13));
+		//System.out.println(pf.getPacient(13));
 	}
 
+	
+	
 }

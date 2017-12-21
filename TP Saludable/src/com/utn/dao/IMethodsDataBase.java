@@ -1,6 +1,5 @@
 package com.utn.dao;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.utn.model.Pacient;

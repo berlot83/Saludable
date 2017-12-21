@@ -1,4 +1,4 @@
-package com.utn.view;
+package com.utn.controllers;
 
 import javax.swing.JOptionPane;
 
