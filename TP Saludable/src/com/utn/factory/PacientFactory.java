@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.utn.controllers.AlertWindow;
+import com.utn.controllers.BackupOnFile;
 import com.utn.dao.IConnection;
 import com.utn.dao.IMethodsDataBase;
 import com.utn.model.Pacient;
+import com.utn.view.LoginWindow;
 
 public class PacientFactory implements IMethodsDataBase<Pacient> {
 
@@ -67,7 +69,7 @@ public class PacientFactory implements IMethodsDataBase<Pacient> {
 
 	@Override
 	public void insertPacient(Pacient pacient) {
-
+		
 		Period periodAge = Period.between(pacient.getBirthday(), LocalDate.now());
 		int age = periodAge.getYears();
 		
@@ -85,6 +87,9 @@ public class PacientFactory implements IMethodsDataBase<Pacient> {
 			ps.setString(9, pacient.getGenre());
 			ps.executeUpdate();
 			System.out.println("Data Updated");
+			
+			/* Backup en txt */
+			BackupOnFile.saveLog(pacient.toString(), pacient.getName());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

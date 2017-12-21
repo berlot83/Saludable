@@ -12,9 +12,8 @@ public class TextAreaResults {
 		results.setEditable(false);
 		results.setBackground(Color.DARK_GRAY);
 		results.setForeground(Color.green);
-		
-		return results;
-		
+
+		return results;		
 	}
 
 }

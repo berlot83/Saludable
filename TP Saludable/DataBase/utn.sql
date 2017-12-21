@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-12-2017 a las 05:59:04
+-- Tiempo de generación: 21-12-2017 a las 15:23:59
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -44,10 +44,11 @@ CREATE TABLE `pacient` (
 --
 
 INSERT INTO `pacient` (`id`, `name`, `lastname`, `birthday`, `dni`, `age`, `telephone`, `email`, `city`, `genre`) VALUES
-(44, 'Amilcar', 'Luilongo', '2001-10-12', 40123456, 16, '46025896', 'amilcar@lujan.com', 'La ferrere', 'Masculino'),
-(50, 'Gisell', 'Gonzalez', '2001-10-12', 36159632, 16, '123123123', 'gisell@yahoo.com.ar', 'Cordoba', 'Femenino'),
-(51, 'Dana', 'Berlot', '2001-10-12', 44157423, 16, '1553189339', 'marcos@yahoo.com.ar', 'Santa Fe', 'Masculino'),
-(52, 'Axel', 'Berlot', '2001-10-12', 30158619, 16, '1553189339', 'marcelo@yahoo.com.ar', 'Villa la angostura', 'Masculino');
+(64, 'Axel', 'asdasd', '2001-10-12', 345345345, 16, '234234', 'sdfsdf', 'sdfsdf', 'sdfsdf'),
+(65, 'Axel', 'hjk', '2001-10-12', 123234345, 16, '567567', 'ghj', 'ghj', 'ghj'),
+(66, 'Axel', 'werwer', '2001-10-12', 22342344, 16, '234', 'wdrf', 'wer', 'we'),
+(67, 'Axel', 'Berlot', '2001-10-12', 30158619, 16, '1553189339', 'berlot83@yahoo.com.ar', 'Caba', 'Masculino'),
+(68, 'Dana', 'Berlot', '2001-10-12', 44274488, 16, '1553189339', 'dana07@yahoo.com.ar', 'Caba', 'Femenino');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `pacient`
 --
 ALTER TABLE `pacient`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
