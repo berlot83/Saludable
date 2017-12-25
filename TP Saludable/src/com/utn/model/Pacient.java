@@ -35,5 +35,4 @@ public class Pacient extends Person {
 		return "Pacient id= "+getId()+ ", Nombre= "+getName()+", Apellido="+getLastname()+", Dni= "+getDni();
 	}
 	
-	
 }

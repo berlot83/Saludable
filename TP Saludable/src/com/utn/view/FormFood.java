@@ -5,12 +5,16 @@ import java.awt.Color;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
 import com.utn.model.Pacient;
 import com.utn.factory.FoodFactory;
 import com.utn.factory.PacientFactory;
@@ -68,6 +72,10 @@ public class FormFood {
 		window.add(topPanel, BorderLayout.NORTH);
 		window.add(centralPanel, BorderLayout.CENTER);
 		window.add(bottomPanel, BorderLayout.SOUTH);
+		
+		/* Separación de los inputs de los bordes */
+		centralPanel.setLayout(new BoxLayout(centralPanel, BoxLayout.Y_AXIS));
+		centralPanel.setBorder(new EmptyBorder(15,15,15,15));
 
 		title = new JLabel("Formulario de comidas");
 		topPanel.add(title);
@@ -118,7 +126,7 @@ public class FormFood {
 		back.addActionListener(event -> window.dispose());
 
 		window.setTitle("Comidas");
-		window.setBounds(0, 0, 200, 400);
+		window.setBounds(0, 0, 250, 400);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 		window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);

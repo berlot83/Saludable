@@ -2,12 +2,17 @@ package com.utn.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.Insets;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 
 import com.utn.controllers.AlertWindow;
 import com.utn.factory.UserFactory;
@@ -17,7 +22,8 @@ public class LoginWindow {
 	private JFrame window;
 	private JPanel topPanel, centralPanel, bottomPanel;
 	private JLabel title, labelUser, labelPassword;
-	private JTextField txtUser, txtPassword;
+	private JTextField txtUser;
+	private JPasswordField txtPassword;
 	private JButton login;
 	private JButton register;
 
@@ -34,6 +40,10 @@ public class LoginWindow {
 		window.add(centralPanel, BorderLayout.CENTER);
 		window.add(bottomPanel, BorderLayout.SOUTH);
 
+		/* Separación de los inputs de los bordes */
+		centralPanel.setLayout(new GridLayout(2,2,2,2));
+		centralPanel.setBorder(new EmptyBorder(5,5,5,5));
+		
 		title = new JLabel("Ingrese credenciales");
 		topPanel.add(title);
 
@@ -41,7 +51,7 @@ public class LoginWindow {
 		txtUser = new JTextField(15);
 
 		labelPassword = new JLabel("Password");
-		txtPassword = new JTextField(15);
+		txtPassword = new JPasswordField(15);
 
 		centralPanel.add(labelUser);
 		centralPanel.add(txtUser);
@@ -93,7 +103,7 @@ public class LoginWindow {
 		bottomPanel.add(register);
 
 		window.setTitle("TP Saludable");
-		window.setBounds(0, 0, 230, 300);
+		window.setBounds(0, 0, 230, 150);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 		window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);

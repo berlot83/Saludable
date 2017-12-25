@@ -1,12 +1,14 @@
 package com.utn.view;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 import com.utn.controllers.AlertWindow;
 import com.utn.factory.UserFactory;
@@ -26,9 +28,15 @@ public class RegisterWindow {
 		bottomPanel = new JPanel();
 		window = new JFrame();
 		topPanel = new JPanel();
+		
+		/* Separación de los inputs de los bordes */
+		centralPanel.setLayout(new GridLayout(2,2,2,2));
+		centralPanel.setBorder(new EmptyBorder(5,5,5,5));
+		
 		window.setLayout(new BorderLayout());
 		window.add(topPanel, BorderLayout.NORTH);
 		window.add(centralPanel, BorderLayout.CENTER);
+		
 		window.add(bottomPanel, BorderLayout.SOUTH);
 		
 		title = new JLabel("Registro de usuario");
@@ -50,7 +58,7 @@ public class RegisterWindow {
 		bottomPanel.add(back);
 		
 		window.setTitle("Registro");
-		window.setBounds(0, 0, 230, 200);
+		window.setBounds(0, 0, 230, 150);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 		

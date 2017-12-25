@@ -1,0 +1,1 @@
+Pacient id= 0, Nombre= Manica, Apellido=Ayos, Dni= 30167284
